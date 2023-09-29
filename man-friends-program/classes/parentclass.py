@@ -6,12 +6,21 @@ class ParentClass:
 
     input_fields = ["Имя", "Дата рождения"]
 
+    fields_names_ids = {"Id": "Id",
+                        "Имя": "Name",
+                        "Дата рождения": "Birthdate",
+                        "Класс": "Class",
+                        "Порода": "Breed",
+                        "Выученные команды": "Learned_commands"}
+
+    required_input_fields = ["Name", "Birthdate", "Breed", "Learned_commands"]
+
     field_width = {"Id": 3,
                    "Имя": 4,
                    "Дата рождения": 14,
                    "Класс": 13,
                    "Порода": 13,
-                   "Выученные команды": 0}
+                   "Выученные команды": 13}
 
     def __init__(self, name: str, birthday: str):
         if not name:
